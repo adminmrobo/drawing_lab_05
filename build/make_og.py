@@ -11,7 +11,8 @@ ITEMS = [("og_index", "cover_index", "구조 먼저 그리기 연구실 05 · �
  ("og_04", "cover_04", "4부 포즈와 연기", "중심축·무게중심·실루엣", ["doctor", "haru", "jupanbot"]),
  ("og_05", "cover_05", "5부 AI로 컷 만들기", "여덟 조각·기준 시트·강도", ["haru", "sia", "moa"]),
  ("og_06", "cover_06", "6부 실패 사례 실험실", "콘티·컷 실패 8종", ["jupanbot", "fruitfly", "x2"]),
- ("og_07", "cover_07", "7부 실전 연습장", "작업대·촬영장·공방·진단", ["haru", "doctor", "x1"])]
+ ("og_07", "cover_07", "7부 실전 연습장", "작업대·촬영장·공방·진단", ["haru", "doctor", "x1"]),
+ ("og_08", "cover_08", "8부 콘티 북", "8·16·32컷 콘티와 완성 컷", ["haru", "doctor", "fruitfly"])]
 os.makedirs(os.path.join(ROOT, "assets", "og"), exist_ok=True)
 for key, cover, t1, t2, cast in ITEMS:
     cp = os.path.join(ROOT, "assets", "img", cover + ".webp")

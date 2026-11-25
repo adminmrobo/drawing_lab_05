@@ -391,6 +391,172 @@
    "kind": "drill",
    "part": "6부",
    "status": "요청 전"
+  },
+  {
+   "key": "cover_08",
+   "page": "08_conti_book.html",
+   "part": "8부 콘티 북",
+   "style": "pixel",
+   "kind": "book",
+   "status": "요청 전"
+  },
+  {
+   "key": "sheet_8",
+   "page": "08_conti_book.html",
+   "part": "8부 1단계",
+   "style": "sketch",
+   "kind": "book",
+   "status": "요청 전"
+  },
+  {
+   "key": "sheet_16_1",
+   "page": "08_conti_book.html",
+   "part": "8부 2단계",
+   "style": "sketch",
+   "kind": "book",
+   "status": "요청 전"
+  },
+  {
+   "key": "sheet_16_2",
+   "page": "08_conti_book.html",
+   "part": "8부 2단계",
+   "style": "sketch",
+   "kind": "book",
+   "status": "요청 전"
+  },
+  {
+   "key": "sheet_32_1",
+   "page": "08_conti_book.html",
+   "part": "8부 예제",
+   "style": "sketch",
+   "kind": "book",
+   "status": "요청 전"
+  },
+  {
+   "key": "sheet_32_2",
+   "page": "08_conti_book.html",
+   "part": "8부 예제",
+   "style": "sketch",
+   "kind": "book",
+   "status": "요청 전"
+  },
+  {
+   "key": "sheet_32_3",
+   "page": "08_conti_book.html",
+   "part": "8부 예제",
+   "style": "sketch",
+   "kind": "book",
+   "status": "요청 전"
+  },
+  {
+   "key": "sheet_32_4",
+   "page": "08_conti_book.html",
+   "part": "8부 예제",
+   "style": "sketch",
+   "kind": "book",
+   "status": "요청 전"
+  },
+  {
+   "key": "done_c31",
+   "page": "08_conti_book.html",
+   "part": "8부 5단계",
+   "style": "anime",
+   "kind": "book",
+   "status": "요청 전"
+  },
+  {
+   "key": "done_c02",
+   "page": "08_conti_book.html",
+   "part": "8부 5단계",
+   "style": "anime",
+   "kind": "book",
+   "status": "요청 전"
+  },
+  {
+   "key": "done_c08",
+   "page": "08_conti_book.html",
+   "part": "8부 5단계",
+   "style": "anime",
+   "kind": "book",
+   "status": "요청 전"
+  },
+  {
+   "key": "done_c11",
+   "page": "08_conti_book.html",
+   "part": "8부 5단계",
+   "style": "anime",
+   "kind": "book",
+   "status": "요청 전"
+  },
+  {
+   "key": "done_c16",
+   "page": "08_conti_book.html",
+   "part": "8부 5단계",
+   "style": "anime",
+   "kind": "book",
+   "status": "요청 전"
+  },
+  {
+   "key": "done_c18",
+   "page": "08_conti_book.html",
+   "part": "8부 5단계",
+   "style": "anime",
+   "kind": "book",
+   "status": "요청 전"
+  },
+  {
+   "key": "done_c23",
+   "page": "08_conti_book.html",
+   "part": "8부 5단계",
+   "style": "anime",
+   "kind": "book",
+   "status": "요청 전"
+  },
+  {
+   "key": "done_c32",
+   "page": "08_conti_book.html",
+   "part": "8부 5단계",
+   "style": "anime",
+   "kind": "book",
+   "status": "요청 전"
+  },
+  {
+   "key": "ab_sheet18",
+   "page": "08_conti_book.html",
+   "part": "8부 5단계 비교",
+   "style": "anime",
+   "kind": "book",
+   "status": "요청 전"
+  },
+  {
+   "key": "sheet_32_1_b",
+   "kind": "make_b",
+   "part": "8부",
+   "status": "요청 전"
+  },
+  {
+   "key": "done_c31_b",
+   "kind": "make_b",
+   "part": "8부",
+   "status": "요청 전"
+  },
+  {
+   "key": "d16_moa_sheet",
+   "kind": "drill",
+   "part": "8부",
+   "status": "요청 전"
+  },
+  {
+   "key": "d17_moa_crop",
+   "kind": "drill",
+   "part": "8부",
+   "status": "요청 전"
+  },
+  {
+   "key": "d17_moa_whole",
+   "kind": "drill",
+   "part": "8부",
+   "status": "요청 전"
   }
  ]
 }

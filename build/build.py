@@ -10,6 +10,10 @@ from content_make import MAKE
 from make_requests import PROMPTS, CONV_OF, ATTACH_OF
 from img_notes import ALT, DRILL_RES, RETRY_RES, RETRY3_RES
 from content_drill import DRILL, RETRY, BASE_OF, RETRY3
+from content_book import P8, S32, S16, S8, BEATS, STORY_LINE, sheet_prompt, cut_prompt, attach_for, DONE, KEY, MAKE8, DRILL8, CODE_KO
+from make_requests_book import BOOK_PROMPTS, BOOK_CONV_OF, BOOK_ATTACH_OF
+PROMPTS.update(BOOK_PROMPTS); CONV_OF.update(BOOK_CONV_OF); ATTACH_OF.update(BOOK_ATTACH_OF)
+MAKE[8] = MAKE8; DRILL[8] = DRILL8
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 VER = "v1.0"
@@ -74,6 +78,12 @@ KG = [
  ("open/age-drift", "OpenQuestion", "나이가 어려 보이는 쏠림", "Apparent age drift", "06_failure_lab.html", "#drift", "큰 머리·작은 몸·낮은 눈 줄·짧은 코가 겹치면 어려 보인다. 성인 나이와 비율을 적어 막는다"),
  ("application/practice", "Application", "실전 연습장", "Practice simulator", "practice/index.html", "#bench", "콘티 작업대·카메라 촬영장·컷 문장 공방·진단 데스크"),
  ("application/template", "Application", "빈 콘티 양식", "Blank storyboard template", "practice/template.html", "#tpl", "여덟 컷 · 세 줄 · 샷과 길이를 적는 인쇄용 양식"),
+ ("method/conti-book", "Method", "콘티 북 만들기", "Making a storyboard book", "08_conti_book.html", "#s1", "한 문장 이야기 → 네 덩어리 × 컷 수 → 표 → 8컷 시트 → 완성 컷"),
+ ("method/cut-splitting", "Method", "컷 쪼개기", "Splitting cuts", "08_conti_book.html", "#s2", "8 → 16 → 32, 한 컷 길이 = 전체 길이 ÷ 컷 수, 쪼갠 컷은 목적이 달라야"),
+ ("method/table-prompt", "Method", "콘티 표 프롬프트", "Storyboard table prompt", "08_conti_book.html", "#s3", "이야기 + 컷 수 + 표의 열 + 규칙을 대화형 AI에"),
+ ("method/sheet-prompt", "Method", "스케치 시트 프롬프트", "Storyboard sheet prompt", "08_conti_book.html", "#s4", "8컷씩 나눠 그리고 둘째 장부터 앞 시트 첨부, 실루엣 규칙"),
+ ("method/sketch-to-cut", "Method", "콘티로 완성 컷 만들기", "From storyboard to finished cut", "08_conti_book.html", "#s5", "그 컷만 잘라 첨부, 구도만 참고, 기준 컷 먼저, 덩어리마다 두 컷"),
+ ("analogy/pizza", "Analogy", "피자 나누기", "Cutting a pizza", "08_conti_book.html", "#s1", "먼저 4등분해 두면 8·16조각도 고르게"),
  ("analogy/travel-plan", "Analogy", "여행 일정", "Planning a trip", "01_beats.html", "#s1", "출발과 도착을 먼저 정하면 일정이 한쪽으로 쏠리지 않는다"),
  ("analogy/rail-track", "Analogy", "기찻길 끝", "Railway tracks meeting", "02_camera.html", "#s2", "두 레일이 만나는 점이 소실점, 그 높이가 내 눈높이"),
  ("analogy/football", "Analogy", "축구 중계 카메라", "Football broadcast camera", "03_flow.html", "#s1", "카메라가 반대편 스탠드로 넘어가면 공격 방향이 뒤집혀 보인다"),
@@ -89,7 +99,9 @@ KG_EDGES = [("method/four-beats","motivates","method/three-lines"),("method/thre
  ("concept/emotion-curve","explains","concept/shot-size"),("concept/emotion-curve","explains","concept/camera-angle"),("method/three-lines","explains","method/cut-prompt"),("method/thumbnail","explains","method/sketch-strength"),
  ("concept/axis-line","explains","application/conti-failures"),("concept/eye-level","explains","application/conti-failures"),
  ("analogy/travel-plan","explains","method/four-beats"),("analogy/rail-track","explains","concept/eye-level"),("analogy/football","explains","concept/axis-line"),("analogy/bow","explains","concept/line-of-action"),("analogy/hair-salon","explains","method/reference-sheet"),
- ("method/cut-prompt","usedIn","application/practice"),("method/three-lines","usedIn","application/template"),("concept/shot-size","usedIn","application/practice")]
+ ("method/cut-prompt","usedIn","application/practice"),("application/practice","motivates","method/conti-book"),("method/conti-book","motivates","method/cut-splitting"),("method/cut-splitting","motivates","method/table-prompt"),
+ ("method/table-prompt","motivates","method/sheet-prompt"),("method/sheet-prompt","motivates","method/sketch-to-cut"),("method/four-beats","explains","method/conti-book"),("method/sketch-strength","explains","method/sketch-to-cut"),
+ ("method/key-cut","explains","method/sketch-to-cut"),("method/reference-sheet","explains","method/sheet-prompt"),("analogy/pizza","explains","method/conti-book"),("method/three-lines","usedIn","application/template"),("concept/shot-size","usedIn","application/practice")]
 REFS = [
  dict(id="user_refs_2026", title="참고 이미지 5장 — 그림 콘티 템플릿(흑백·인쇄용 8컷), 원근과 인물 크기 도해, 어린이·성인 얼굴 비교, 손에 든 물건과 자세의 중심축 도해, 캐릭터 일관성 기준 시트 예시", author="사용자 제공 자료", year=2026, note="콘티 양식(목적·흐름·감정 세 줄), 눈높이 선과 소실점, 성인 얼굴 신호, 중심축·물건 무게·과장, 일관성 기준 시트의 원리만 참고. 그림·문장·도식·구성은 옮기지 않고 연구실 캐릭터와 실험으로 새로 구성"),
  dict(id="katz_1991_shot", title="Film Directing Shot by Shot: Visualizing from Concept to Screen", author="Steven D. Katz", year=1991, note="Michael Wiese Productions — 콘티(스토리보드)로 장면과 카메라를 설계하는 방법"),
@@ -104,7 +116,7 @@ REFS = [
  dict(id="prev_01", title="구조 먼저 그리기 연구실 01 · 옷장 편", author="안상선", year=2026, note="옷 주름·그림자와 AI·VFX. https://adminmrobo.github.io/structure_first_drawing_lab_01/"),
  dict(id="prev_series", title="구조 먼저 보는 캐릭터 그리기 연구실", author="안상선", year=2026, note="첫 시리즈. 구조·빛·주름 기초와 확산 모델·프롬프트 기초. https://adminmrobo.github.io/adminmrobo-structure_first_drawing_lab/"),
 ]
-FOOT_LINKS = [("index.html", "목차")] + [(P["file"], f"{P['no']}부") for P in PARTS] + [("practice/index.html", "7부 실전 연습장"), ("practice/template.html", "빈 콘티 양식")]
+FOOT_LINKS = [("index.html", "목차")] + [(P["file"], f"{P['no']}부") for P in PARTS] + [("practice/index.html", "7부 실전 연습장"), ("08_conti_book.html", "8부 콘티 북"), ("practice/template.html", "빈 콘티 양식")]
 
 def footer(pre=""):
     links = " · ".join(f'<a href="{pre}{h}">{E(t)}</a>' for h, t in FOOT_LINKS) + f' · <a href="{REPO}">저장소</a>'
@@ -414,6 +426,8 @@ def build_part(P):
 """
     for k, st in enumerate(P["steps"]):
         s += step(P, k + 1, st)
+    if P.get("extra"):
+        s += P["extra"]()
     if P.get("fails"):
         s += '<section class="room" id="fails"><div class="wrap"><div class="roomno">6부 · 2단계</div><h2>콘티·컷 실패 8종 진단</h2><p class="muted">그림마다 증상을 보고 처음 걸리는 점검 항목을 고른 뒤, 연결된 원리와 고치는 문장 조각을 확인합니다. 여러 컷을 이어 봐야 보이는 실패는 한 그림 안에 컷을 나란히 놓았습니다.</p>'
         s += "".join(failcard(f) for f in P["fails"])
@@ -434,10 +448,12 @@ FLOW = [
  (5, "AI로 컷 만들기", "AI는 콘티를 모른다. 문장과 기준으로 알려 줘야 한다", "여덟 조각·기준 시트·밑그림 강도·기준 컷"),
  (6, "실패 사례 실험실", "문장을 써도 컷은 틀릴 수 있다", "진단 순서와 고치는 조각, 나이 쏠림"),
  (7, "실전 연습장", "배운 것을 한 화면에서 함께 다뤄 본다", "콘티 작업대·카메라 촬영장·문장 공방·진단·빈 양식"),
+ (8, "콘티 북", "연습을 마치면 내 이야기, 더 긴 이야기를 콘티로 만들고 싶어진다", "8·16·32컷 쪼개기·표 문장·시트·콘티로 완성 컷"),
 ]
 def flow_strip(cur=None, pre=""):
     files = {P["no"]: P["file"] for P in PARTS}
     files[7] = "practice/index.html"
+    files[8] = "08_conti_book.html"
     cells = []
     for n, t, _, _ in FLOW:
         mark = ' style="border-color:var(--orange);background:var(--orange-soft)"' if n == cur else ""
@@ -456,9 +472,10 @@ def build_index():
 <p class="byline">글 · 안상선 ((주)M-Robo 대표) · <a href="{AUTHOR_URL}">저자 소개</a> · {DATE} · {VER}</p></div></header>
 <section><div class="wrap">{three("이야기를 여덟 컷으로 나눠 컷마다 목적·흐름·감정을 적고, 샷·눈높이·가상선·자세를 정한 콘티를 짠 뒤, 그 콘티를 문장과 기준 그림으로 바꿔 AI로 컷 그림을 만드는 방법을 익힙니다.", "그림부터 그리면 이야기가 끝까지 가지 않고, AI에게 한 줄로 맡기면 여덟 장이 여덟 사람·여덟 방향으로 나옵니다. 콘티가 있어야 컷이 이어집니다.", "짧은 애니메이션·광고·웹툰의 장면 설계, AI로 연속 컷을 만들기 전의 기획, 팀에 장면을 설명하는 회의, 받은 AI 컷의 검수에 씁니다.", ABBR)}</div></section>
 <section id="howto"><div class="wrap"><h2>읽는 순서와 시간</h2><div class="box"><ul style="margin:0;padding-left:20px">
-<li><b>처음부터 차례로</b>(권장): 부마다 실험을 눌러 보며 25~35분, 전체 3시간 30분 안팎입니다.</li>
+<li><b>처음부터 차례로</b>(권장): 부마다 실험을 눌러 보며 25~35분, 전체 4시간 안팎입니다.</li>
 <li><b>앞 편을 안 봤다면</b>: 바로 읽어도 됩니다. 낱말은 다시 설명합니다. 캐릭터 얼굴은 <a href="{FACE_SITE}">03 얼굴 편</a>, 옷은 <a href="{CLOTH_SITE}">01 옷장 편</a>, 빛·확산 모델 기초는 <a href="{FIRST_SITE}">구조 먼저 보는 캐릭터 그리기 연구실</a>에 있습니다.</li>
 <li><b>콘티만 짜고 싶다면</b>: 1~4부와 <a href="practice/template.html">빈 콘티 양식</a>. <b>AI 컷이 급하다면</b>: 1부 2단계(세 줄) → 5부 → 6부 → 7부, 막히는 낱말은 각 단계의 링크로 되짚어 보세요.</li>
+<li><b>내 이야기로 콘티를 만들고 싶다면</b>: 7부 뒤의 <a href=\"08_conti_book.html\">8부 콘티 북</a> — 이야기를 8·16·32컷 콘티 표로 바꾸는 문장, 스케치 시트 프롬프트, 콘티로 완성 컷을 만드는 프롬프트를 생성기로 만들어 줍니다.</li>
 <li>각 부 끝의 <b>평가단 채점</b>은 이야기 속 예시 점수입니다. 확인 퀴즈와 실전 연습장 미션으로 스스로 점검하세요.</li></ul></div></div></section>
 <section id="sample"><div class="wrap"><h2>예시 콘티 — 「하루, 초파리를 찾아 옥상까지」</h2>
 <p class="muted">이 편의 모든 부가 함께 쓰는 여덟 컷입니다. 인물은 동그라미 머리와 십자선(얼굴 방향)만 있는 마네킹으로 그렸고, 컷마다 아래에 목적·흐름·동작·감정·보충 세 줄을 적었습니다. 1부에서는 이 뼈대를, 2부에서는 카메라를, 3부에서는 컷 사이를, 4부에서는 자세를, 5부에서는 이 콘티로 AI 컷을 만드는 법을 다룹니다.</p>
@@ -474,6 +491,7 @@ def build_index():
 <a class="card" href="05_ai_cuts.html">{face("haru","e19")}<span class="n">5부 · 모델 모두</span><h3>AI로 컷 만들기</h3><p>컷 문장 여덟 조각, 기준 시트, 밑그림 강도, 기준 컷 먼저.</p></a>
 <a class="card" href="06_failure_lab.html">{face("jupanbot","e20")}<span class="n">6부 · 의도적 실패 8종</span><h3>실패 사례 실험실</h3><p>증상 → 처음 걸린 곳 → 원리 → 고치는 조각. 나이 쏠림 막기.</p></a>
 <a class="card" href="practice/index.html">{face("x2","e16")}<span class="n">7부 · 마지막 장</span><h3>실전 연습장</h3><p>콘티 작업대·카메라 촬영장·컷 문장 공방·진단 데스크, 그리고 빈 콘티 양식.</p></a>
+<a class="card" href="08_conti_book.html">{face("haru","e19")}<span class="n">8부 · 주인공 하루 · 모두 출연</span><h3>콘티 북</h3><p>내 이야기를 8·16·32컷 콘티로, 콘티를 다시 Genspark에 줘서 완성 컷으로. 예제는 하루의 하루 32컷.</p></a>
 </div></div></section>
 <section id="map"><div class="wrap"><h2>전체 흐름 — 1부부터 7부까지 이어지는 순서</h2>{flow_strip()}
 <div class="tbl" style="margin-top:16px"><table><thead><tr><th>부</th><th>제목</th><th>이 부를 배우는 까닭</th><th>핵심</th></tr></thead><tbody>
@@ -499,7 +517,7 @@ def build_index():
 <p>사용자가 제공한 참고 이미지 다섯 장(흑백 인쇄용 8컷 그림 콘티 템플릿, 원근과 인물 크기 도해, 어린이·성인 얼굴 비교, 손에 든 물건과 자세의 중심축 도해, 캐릭터 일관성 기준 시트 예시)에서는 원리만 가져왔습니다. 그림·문장·도식·구성은 옮기지 않았고, 연구실 캐릭터와 직접 움직이는 실험으로 새로 구성했습니다. 어린이 얼굴 예시는 '어려 보이는 쏠림'을 막는 데만 썼고, 무기를 든 자세 예시는 상자·문·우산으로 바꿨습니다.</p>
 <p>밑그림 강도와 부분 수정, 캐릭터 일관성은 확산 모델 연구(Meng 외 2022, Rombach 외 2022, Lugmayr 외 2022, Ruiz 외 2023)를 바탕으로 풀었습니다. 페이지의 그림(표지 8장은 픽셀아트, 본문·실패 그림은 애니풍과 연필 콘티)은 Genspark로 만들 예정이며, 요청문은 저장소 <code>docs/image_requests/</code>에 있습니다. 그림을 받기 전까지는 '그림 준비 중' 자리로 두고, 받은 뒤 요청과 다르게 나온 곳은 그림 설명과 '실제 결과'에 있는 그대로 적습니다. 실험 패널과 예시 콘티 그림은 모두 페이지 안에서 직접 계산해 그립니다.</p></div></section>
 """
-    s += kg_block("index", [P["file"] for P in PARTS] + ["practice/index.html", "practice/template.html"])
+    s += kg_block("index", [P["file"] for P in PARTS] + ["practice/index.html", "08_conti_book.html", "practice/template.html"])
     s += footer()
     open(os.path.join(ROOT, "index.html"), "w").write(s)
 
@@ -508,7 +526,7 @@ def build_practice():
     t = f"{SERIES} 7부 — 실전 연습장"
     d = "콘티 작업대(덩어리·절정·길이), 카메라 촬영장(샷·앵글·자리), 컷 문장 공방(AI 문장), 진단 데스크(실패 맞히기) 네 곳을 직접 운영하며 1~6부를 함께 연습합니다. 인쇄용 빈 콘티 양식도 있습니다."
     s = head(t, d, "og_07.jpg", "practice/index.html", pre)
-    s += nav([("#bench", "콘티 작업대"), ("#camera", "카메라 촬영장"), ("#workshop", "공방"), ("#desk", "진단 데스크"), ("#wrap", "마무리"), ("template.html", "빈 양식")], pre)
+    s += nav([("#bench", "콘티 작업대"), ("#camera", "카메라 촬영장"), ("#workshop", "공방"), ("#desk", "진단 데스크"), ("#wrap", "마무리"), ("template.html", "빈 양식"), ("../08_conti_book.html", "8부 →")], pre)
     s += cover("cover_07", "연구실 조종 책상 · 실전 연습장", [("haru", "e19"), ("doctor", "e16"), ("fruitfly", "e09"), ("jupanbot", "e16")], pre)
     s += f"""<header class="hero"><div class="wrap"><span class="kicker">7부 · 마지막 장</span><h1>실전 연습장</h1>
 <p class="lead">네 곳의 작업대를 직접 운영합니다. <span style="color:var(--green)">초록 조작판</span>은 주어진 환경, <span style="color:var(--blue)">파랑 조작판</span>은 내 결정입니다. 미션은 직접 조작해야 판정됩니다. 다 하고 나면 <a href="template.html">빈 콘티 양식</a>에 내 콘티를 짜 보세요.</p>
@@ -555,7 +573,7 @@ def build_practice():
 <div class="box"><p>콘티 작업대에서 세운 뼈대(덩어리·절정·첫 컷)는 카메라 촬영장의 '컷의 목적'이 되고, 촬영장에서 고른 샷·앵글·자리는 공방의 '샷·앵글·방향' 조각이 됩니다. 진단 데스크에서 틀린 원인은 대부분 앞의 세 곳 중 하나가 빠진 경우입니다. AI 컷 그림은 결국 <b>콘티 한 컷의 결정을 문장과 기준 그림으로 옮기는 일</b>입니다.</p>
 <p><b>실제 그림으로 이어 가기</b> — ① <a href="template.html">빈 콘티 양식</a>에 내 이야기 여덟 컷을 짭니다. ② 컷 문장 공방에서 컷마다 문장을 조립해 그림 생성 AI에 넣습니다. ③ 기준 컷을 먼저 확정하고 같은 대화에서 이어 만듭니다. ④ 결과는 각 부의 '프롬프트로 직접 만들어 보기' 확인표로 점검합니다: <a href="{pre}01_beats.html#make">1부</a> · <a href="{pre}02_camera.html#make">2부</a> · <a href="{pre}03_flow.html#make">3부</a> · <a href="{pre}04_pose.html#make">4부</a> · <a href="{pre}05_ai_cuts.html#make">5부</a> · <a href="{pre}06_failure_lab.html#make">6부</a></p>
 <p class="hint">주의할 점: 이 연습장의 기준값(두 컷씩 나누기, 절정 6~7컷, 샷별 머리 개수, 판정 범위)은 원리를 보이기 위한 예시입니다. 실제 작품과 도구마다 다릅니다.</p></div>
-<div class="next"><a href="{pre}06_failure_lab.html">← 6부 실패 사례 실험실</a><a href="template.html">빈 콘티 양식 →</a></div></div></section>
+<div class="next"><a href="{pre}06_failure_lab.html">← 6부 실패 사례 실험실</a><a href="template.html">빈 콘티 양식</a><a href="{pre}08_conti_book.html">8부 콘티 북 →</a></div></div></section>
 """
     s += kg_block("practice_index", ["practice/index.html"])
     s += footer(pre)
@@ -584,13 +602,48 @@ def build_template():
 """
     open(os.path.join(ROOT, "practice", "template.html"), "w").write(s)
 
+def book_data():
+    s32 = [[r[0], r[1], r[2], r[3], r[4], r[5], r[6], r[7], r[8], "·".join(CODE_KO[c] for c in r[8])] for r in S32]
+    sheet = {f"{n}_{k}": sheet_prompt(n, k) for n in (8, 16, 32) for k in range(1, n // 8 + 1)}
+    cut = {f"{c}_{m}": cut_prompt(c, "crop" if m == "crop" else "sheet") for c in range(1, 33) for m in ("crop", "sheet")}
+    att = {f"{c}_{m}": attach_for(c, "crop" if m == "crop" else "sheet") for c in range(1, 33) for m in ("crop", "sheet")}
+    return dict(s32=s32, s16=[list(r) for r in S16], s8=[list(r) for r in S8], beats=BEATS, story=STORY_LINE, sheet=sheet, cut=cut, attach=att, done=DONE, key=KEY)
+
+def book_example():
+    tot = sum(r[7] for r in S32)
+    rows = ""
+    for r in S32:
+        k = (r[0] - 1) // 8
+        star = " ★" if r[0] in DONE else ""
+        rows += f'<tr><td>{r[0]}{star}</td><td>{BEATS[k]}</td><td>{E(r[1])}</td><td>{E(r[2])}</td><td>{E(r[3])}</td><td>{r[4]}</td><td>{E(r[5])}</td><td>{E(r[6])}</td><td>{r[7]}</td><td>{"·".join(CODE_KO[c] for c in r[8])}</td></tr>'
+    sheets = "".join(f'<div>{art(f"sheet_32_{k}", BOOK_PROMPTS[f"sheet_32_{k}"][3], "16/9")}</div>' for k in range(1, 5))
+    dones = "".join(f'<div>{art(f"done_c{c:02d}", BOOK_PROMPTS[f"done_c{c:02d}"][3], "16/9")}</div>' for c in [KEY] + [c for c in DONE if c != KEY])
+    return f"""<section class="room" id="example"><div class="wrap"><div class="roomno">8부 · 예제</div><h2>하루의 하루 — 32컷 콘티 북</h2>
+<p class="muted">이야기(한 문장): {E(STORY_LINE)}</p>
+<p>생성기(3단계)로 만든 표를 1부 3단계(감정 곡선)와 2부 1단계(샷)로 다듬은 결과입니다. 컷 길이 합계 <b>{f"{tot:g}"}초</b>, 절정은 31컷(감정 9), ★는 완성 컷으로 만든 여덟 컷입니다.</p>
+<details class="box"><summary><b>32컷 콘티 표 펼쳐 보기</b> — 목적 · 흐름·동작 · 감정·보충 · 감정 세기 · 샷 · 앵글 · 길이 · 등장</summary>
+<div class="tbl" style="margin-top:10px"><table><thead><tr><th>컷</th><th>덩어리</th><th>목적</th><th>흐름·동작</th><th>감정·보충</th><th>세기</th><th>샷</th><th>앵글</th><th>초</th><th>등장</th></tr></thead><tbody>{rows}</tbody></table></div></details>
+<h3 style="margin-top:20px">스케치 시트 네 장 (4단계 프롬프트로 만든 그림)</h3>
+<div class="pair">{sheets}</div>
+<h3 style="margin-top:20px">완성 컷 여덟 장 (5단계 — 기준 컷 31을 먼저)</h3>
+<div class="pair">{dones}</div>
+<h3 style="margin-top:20px">비교 — 시트를 통째로 첨부하면</h3>
+<div class="pair"><div>{art("ab_sheet18", BOOK_PROMPTS["ab_sheet18"][3], "16/9")}</div><div>{art("done_c18", BOOK_PROMPTS["done_c18"][3], "16/9")}</div></div>
+<p class="hint">왼쪽은 시트 3 전체를 첨부한 결과, 오른쪽은 18컷만 잘라 첨부한 결과입니다. 그림을 받으면 실제로 무엇이 달랐는지(또는 같았는지) 이 자리에 있는 그대로 적습니다. 프롬프트는 5단계 생성기에서 컷 18과 첨부 방법을 바꿔 가며 볼 수 있습니다. 요청 꾸러미: <code>docs/image_requests_book/</code></p>
+</div></section>
+"""
+
 if __name__ == "__main__":
-    JS = ["js_base.js", "js_practice_util.js", "js_conti.js", "js_tail.js"]
+    JS = ["js_base.js", "js_practice_util.js", "js_conti.js", "js_book.js", "js_tail.js"]
     os.makedirs(os.path.join(ROOT, "practice"), exist_ok=True)
-    open(os.path.join(ROOT, "assets", "panels.js"), "w").write("".join(open(os.path.join(ROOT, "build", f)).read() for f in JS))
+    parts = [open(os.path.join(ROOT, "build", f)).read() for f in JS]
+    parts.insert(3, "var BOOK=" + json.dumps(book_data(), ensure_ascii=False) + ";\n")
+    open(os.path.join(ROOT, "assets", "panels.js"), "w").write("".join(parts))
     build_index()
     for P in PARTS:
         build_part(P)
     build_practice()
     build_template()
-    print("built", len(PARTS) + 3, "pages")
+    P8["extra"] = book_example
+    build_part(P8)
+    print("built", len(PARTS) + 4, "pages")
