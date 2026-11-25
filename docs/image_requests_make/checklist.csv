@@ -1,0 +1,13 @@
+order,conversation,file,page,ratio,how,status
+1,M01,b1_haru_8cuts_b,01_beats.html#make,16:9,A 결과를 첨부하고 Change only 문장으로,
+2,M01,b1_moa_emotion_b,01_beats.html#make,16:9,A 결과를 첨부하고 Change only 문장으로,
+3,M02,b2_haru_shots_b,02_camera.html#make,16:9,A 결과를 첨부하고 Change only 문장으로,
+4,M02,b2_eyelevel_b,02_camera.html#make,16:9,A 결과를 첨부하고 Change only 문장으로,
+5,M03,b3_direction_b,03_flow.html#make,16:9,A 결과를 첨부하고 Change only 문장으로,
+6,M03,b3_eyeline_b,03_flow.html#make,16:9,A 결과를 첨부하고 Change only 문장으로,
+7,M04,b4_doctor_axis_b,04_pose.html#make,16:9,A 결과를 첨부하고 Change only 문장으로,
+8,M04,b4_haru_prop_b,04_pose.html#make,16:9,A 결과를 첨부하고 Change only 문장으로,
+9,M05,b5_sketch_to_cut_b,05_ai_cuts.html#make,16:9,A 결과를 첨부하고 Change only 문장으로,
+10,M05,b5_haru_anchor_b,05_ai_cuts.html#make,16:9,새 대화 세 개에서 따로 만든 뒤 나란히 붙여 한 장으로,
+11,M06,f2_fixed,06_failure_lab.html#make,16:9,A 결과를 첨부하고 Change only 문장으로,
+12,M06,f6_fixed,06_failure_lab.html#make,16:9,그림 생성이 아니라 '부분 수정(영역 칠하기)' 기능으로 — 둘째·셋째 컷의 머리와 후드만 칠하기,
