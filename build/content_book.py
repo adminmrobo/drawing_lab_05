@@ -290,7 +290,7 @@ if __name__ == "__main__":
 from content_make import T
 MAKE8 = [
  T("sheet_32_1", "32컷 시트 1 — 실루엣 규칙의 힘", "시트 1(집, 1~8컷)을 만들어 연필 마네킹으로도 하루가 알아보이는지 봅니다.",
-   "B — 원리 빼기: 실루엣 규칙 지우기", "Same sheet, keep the same layout. Change only: remove the character silhouette rules — draw every figure as an identical plain mannequin with no hair, glasses, robot or insect features. Still no text.",
+   "B — 원리 빼기: 실루엣 규칙 지우기", "In a NEW conversation, use the sheet 1 prompt above but replace the silhouette rule paragraph (Keep every character recognizable …) with: Draw every figure as an identical plain mannequin with no hair, no glasses, no robot or insect features, so the characters cannot be told apart.",
    [("여덟 컷 모두 하루가 번 두 개로 알아보이나", "#s4"), ("컷마다 목적이 달라 보이나(침실 → 현관)", "#s2"), ("B에서 시트 3(만남)을 그린다면 누가 누군지 구별될지 상상해 보기", "#s4")],
    b_key="sheet_32_1_b", tip="실루엣 규칙은 아홉 명이 나오는 시트 3·4에서 더 중요합니다. 시트 1에서 먼저 확인해 두세요."),
  T("done_c31", "기준 컷 — 스케치를 붙였을 때와 안 붙였을 때", "31컷을 스케치를 잘라 붙여 만든 A와, 글만으로 만든 B를 비교해 콘티를 다시 주는 효과를 확인합니다.",

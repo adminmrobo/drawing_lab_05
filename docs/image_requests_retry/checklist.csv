@@ -1,0 +1,13 @@
+order,conversation,file,page,part,how,status
+1,R01,b1_moa_emotion_b,01_beats.html,1부 직접 만들기 B(다시),새 대화,
+2,R01,b2_haru_shots_b,02_camera.html,2부 직접 만들기 B(다시),새 대화,
+3,R01,b2_eyelevel,02_camera.html,2부 2단계(다시),새 대화,
+4,R01,b2_eyelevel_b,02_camera.html,2부 직접 만들기 B(다시),새 대화,
+5,R02,b3_direction_b,03_flow.html,3부 직접 만들기 B(다시),새 대화,
+6,R02,b3_eyeline_b,03_flow.html,3부 직접 만들기 B(다시),새 대화,
+7,R02,b4_doctor_axis_b,04_pose.html,4부 직접 만들기 B(다시),새 대화,
+8,R02,b4_haru_prop,04_pose.html,4부 3단계(다시),새 대화,
+9,R02,b4_haru_prop_b,04_pose.html,4부 직접 만들기 B(다시),새 대화,
+10,R03,f2_fixed,06_failure_lab.html,6부 고치기(다시),새 대화,
+11,R03,f6_fixed,06_failure_lab.html,6부 고치기(다시),새 대화,
+12,R03,d4_corridor_eye,02_camera.html,2부 연습 과제 d2(다시),새 대화,
