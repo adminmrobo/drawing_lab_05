@@ -53,5 +53,5 @@ P.p8_cut=function(h){var W=560,H=230;var pre=null,att=null;
     ktxt(s,14,160,'컷 '+c+' — '+q[1]+' · '+q[5]+' · '+q[6]+(BOOK.done.indexOf(c)>=0?' · ★ 완성할 컷':''),{size:12,fill:C.ink});ktxt(s,14,182,'등장: '+q[9],{size:11.5});
     if(!att){att=document.createElement('div');att.className='box';att.style.marginTop='8px';h.appendChild(att);}if(!pre)pre=promptBox(h,'Genspark에 넣을 완성 컷 프롬프트');
     att.innerHTML='<b>첨부할 것</b> — '+BOOK.attach[c+'_'+m].join(' · ');pre.textContent=BOOK.cut[c+'_'+m];
-    out(h).innerHTML=(m==='crop'?verdict(true,'그 컷만 잘라 붙이고 "구도와 자세만 참고"를 적었습니다'):verdict(false,'시트 통째로 — 여러 컷 그림이 다시 나오거나 연필 그림체가 남기 쉽습니다(A/B 비교 그림 참고)'))+(c===BOOK.key?' · 이 컷이 <b>기준 컷</b>입니다. 가장 먼저 만드세요.':' · 기준 컷(31컷)을 먼저 만든 뒤 함께 첨부합니다.');}
+    out(h).innerHTML=(m==='crop'?verdict(true,'그 컷만 잘라 붙이고 "구도와 자세만 참고"를 적었습니다'):verdict(false,'시트 통째로 — 여러 컷 그림이 다시 나오거나 연필 그림체가 남을 수 있습니다(이번 실험에서는 잘 나왔지만 컷을 잘못 고를 위험이 있음)'))+(c===BOOK.key?' · 이 컷이 <b>기준 컷</b>입니다. 가장 먼저 만드세요.':' · 기준 컷(31컷)을 먼저 만든 뒤 함께 첨부합니다.');}
   allIn(h,draw);draw();};

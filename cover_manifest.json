@@ -104,7 +104,7 @@
    "part": "2부 2단계",
    "style": "anime",
    "kind": "body",
-   "status": "반영(2026-11-26)"
+   "status": "반영(첫 시도 유지 — 두 번째 시도도 눈높이 실패)"
   },
   {
    "key": "b3_direction",
@@ -136,7 +136,7 @@
    "part": "4부 3단계",
    "style": "anime",
    "kind": "body",
-   "status": "반영(2026-11-26)"
+   "status": "반영(두 번째 시도, 2026-11-26)"
   },
   {
    "key": "b5_haru_anchor",
@@ -228,43 +228,43 @@
    "key": "b1_moa_emotion_b",
    "kind": "make_b",
    "part": "1부",
-   "status": "반영(2026-11-26)"
+   "status": "반영(두 번째 시도, 2026-11-26)"
   },
   {
    "key": "b2_haru_shots_b",
    "kind": "make_b",
    "part": "2부",
-   "status": "반영(2026-11-26)"
+   "status": "반영(두 번째 시도, 2026-11-26)"
   },
   {
    "key": "b2_eyelevel_b",
    "kind": "make_b",
    "part": "2부",
-   "status": "받음 · 싣지 않음(요청 외 인물·옷차림)"
+   "status": "반영(두 번째 시도, 2026-11-26)"
   },
   {
    "key": "b3_direction_b",
    "kind": "make_b",
    "part": "3부",
-   "status": "반영(2026-11-26)"
+   "status": "반영(두 번째 시도, 2026-11-26)"
   },
   {
    "key": "b3_eyeline_b",
    "kind": "make_b",
    "part": "3부",
-   "status": "반영(2026-11-26)"
+   "status": "반영(두 번째 시도, 2026-11-26)"
   },
   {
    "key": "b4_doctor_axis_b",
    "kind": "make_b",
    "part": "4부",
-   "status": "반영(2026-11-26)"
+   "status": "반영(두 번째 시도, 2026-11-26)"
   },
   {
    "key": "b4_haru_prop_b",
    "kind": "make_b",
    "part": "4부",
-   "status": "반영(2026-11-26)"
+   "status": "반영(두 번째 시도, 2026-11-26)"
   },
   {
    "key": "b5_sketch_to_cut_b",
@@ -282,13 +282,13 @@
    "key": "f2_fixed",
    "kind": "make_b",
    "part": "6부",
-   "status": "반영(2026-11-26)"
+   "status": "반영(두 번째 시도, 2026-11-26)"
   },
   {
    "key": "f6_fixed",
    "kind": "make_b",
    "part": "6부",
-   "status": "반영(2026-11-26)"
+   "status": "반영(두 번째 시도, 2026-11-26)"
   },
   {
    "key": "d1_thumbs",
@@ -324,7 +324,7 @@
    "key": "d4_corridor_eye",
    "kind": "drill",
    "part": "2부",
-   "status": "반영(2026-11-26)"
+   "status": "반영(첫 시도 유지 — 두 번째 시도도 눈높이 실패)"
   },
   {
    "key": "d5_run_right",
@@ -398,7 +398,7 @@
    "part": "8부 콘티 북",
    "style": "pixel",
    "kind": "book",
-   "status": "요청 전"
+   "status": "반영(2026-11-26)"
   },
   {
    "key": "sheet_8",
@@ -406,7 +406,7 @@
    "part": "8부 1단계",
    "style": "sketch",
    "kind": "book",
-   "status": "요청 전"
+   "status": "반영(2026-11-26)"
   },
   {
    "key": "sheet_16_1",
@@ -414,7 +414,7 @@
    "part": "8부 2단계",
    "style": "sketch",
    "kind": "book",
-   "status": "요청 전"
+   "status": "반영(2026-11-26)"
   },
   {
    "key": "sheet_16_2",
@@ -422,7 +422,7 @@
    "part": "8부 2단계",
    "style": "sketch",
    "kind": "book",
-   "status": "요청 전"
+   "status": "반영(2026-11-26)"
   },
   {
    "key": "sheet_32_1",
@@ -430,7 +430,7 @@
    "part": "8부 예제",
    "style": "sketch",
    "kind": "book",
-   "status": "요청 전"
+   "status": "반영(2026-11-26)"
   },
   {
    "key": "sheet_32_2",
@@ -438,7 +438,7 @@
    "part": "8부 예제",
    "style": "sketch",
    "kind": "book",
-   "status": "요청 전"
+   "status": "반영(2026-11-26)"
   },
   {
    "key": "sheet_32_3",
@@ -446,7 +446,7 @@
    "part": "8부 예제",
    "style": "sketch",
    "kind": "book",
-   "status": "요청 전"
+   "status": "반영(2026-11-26)"
   },
   {
    "key": "sheet_32_4",
@@ -454,7 +454,7 @@
    "part": "8부 예제",
    "style": "sketch",
    "kind": "book",
-   "status": "요청 전"
+   "status": "반영(2026-11-26)"
   },
   {
    "key": "done_c31",
@@ -462,7 +462,7 @@
    "part": "8부 5단계",
    "style": "anime",
    "kind": "book",
-   "status": "요청 전"
+   "status": "반영(2026-11-26)"
   },
   {
    "key": "done_c02",
@@ -470,7 +470,7 @@
    "part": "8부 5단계",
    "style": "anime",
    "kind": "book",
-   "status": "요청 전"
+   "status": "반영(2026-11-26)"
   },
   {
    "key": "done_c08",
@@ -478,7 +478,7 @@
    "part": "8부 5단계",
    "style": "anime",
    "kind": "book",
-   "status": "요청 전"
+   "status": "반영(2026-11-26)"
   },
   {
    "key": "done_c11",
@@ -486,7 +486,7 @@
    "part": "8부 5단계",
    "style": "anime",
    "kind": "book",
-   "status": "요청 전"
+   "status": "반영(2026-11-26)"
   },
   {
    "key": "done_c16",
@@ -494,7 +494,7 @@
    "part": "8부 5단계",
    "style": "anime",
    "kind": "book",
-   "status": "요청 전"
+   "status": "반영(2026-11-26)"
   },
   {
    "key": "done_c18",
@@ -502,7 +502,7 @@
    "part": "8부 5단계",
    "style": "anime",
    "kind": "book",
-   "status": "요청 전"
+   "status": "반영(2026-11-26)"
   },
   {
    "key": "done_c23",
@@ -510,7 +510,7 @@
    "part": "8부 5단계",
    "style": "anime",
    "kind": "book",
-   "status": "요청 전"
+   "status": "반영(2026-11-26)"
   },
   {
    "key": "done_c32",
@@ -518,7 +518,7 @@
    "part": "8부 5단계",
    "style": "anime",
    "kind": "book",
-   "status": "요청 전"
+   "status": "반영(2026-11-26)"
   },
   {
    "key": "ab_sheet18",
@@ -526,37 +526,37 @@
    "part": "8부 5단계 비교",
    "style": "anime",
    "kind": "book",
-   "status": "요청 전"
+   "status": "반영(2026-11-26)"
   },
   {
    "key": "sheet_32_1_b",
    "kind": "make_b",
    "part": "8부",
-   "status": "요청 전"
+   "status": "반영(2026-11-26)"
   },
   {
    "key": "done_c31_b",
    "kind": "make_b",
    "part": "8부",
-   "status": "요청 전"
+   "status": "반영(2026-11-26)"
   },
   {
    "key": "d16_moa_sheet",
    "kind": "drill",
    "part": "8부",
-   "status": "요청 전"
+   "status": "반영(2026-11-26)"
   },
   {
    "key": "d17_moa_crop",
    "kind": "drill",
    "part": "8부",
-   "status": "요청 전"
+   "status": "반영(2026-11-26)"
   },
   {
    "key": "d17_moa_whole",
    "kind": "drill",
    "part": "8부",
-   "status": "요청 전"
+   "status": "반영(2026-11-26)"
   }
  ]
 }
