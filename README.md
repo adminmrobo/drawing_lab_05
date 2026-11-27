@@ -20,7 +20,7 @@
 | 부록 | `practice/template.html` | 인쇄용 빈 콘티 양식(가로 A4) |
 
 ## 원리와 출처
-사용자가 제공한 참고 이미지 5장(8컷 그림 콘티 템플릿, 원근과 인물 크기 도해, 어린이·성인 얼굴 비교, 중심축 도해, 캐릭터 일관성 기준 시트)에서 원리만 가져왔고, 그림·문장·도식·구성은 옮기지 않았습니다. 그 밖의 출처(Katz 1991, Bordwell·Thompson·Smith 2019, Thomas·Johnston 1981, Loomis 1951, Meng 외 2022, Rombach 외 2022, Lugmayr 외 2022, Ruiz 외 2023)는 각 페이지 바닥글에 있습니다. 숫자는 모두 설명용 예시값입니다.
+그 밖의 출처(Katz 1991, Bordwell·Thompson·Smith 2019, Thomas·Johnston 1981, Loomis 1951, Meng 외 2022, Rombach 외 2022, Lugmayr 외 2022, Ruiz 외 2023)는 각 페이지 바닥글에 있습니다. 숫자는 모두 설명용 예시값입니다.
 
 ## 그림
 그림은 아직 들어오지 않았습니다(페이지는 '그림 준비 중' 자리로 완성 상태). 요청 꾸러미:

@@ -103,7 +103,6 @@ KG_EDGES = [("method/four-beats","motivates","method/three-lines"),("method/thre
  ("method/table-prompt","motivates","method/sheet-prompt"),("method/sheet-prompt","motivates","method/sketch-to-cut"),("method/four-beats","explains","method/conti-book"),("method/sketch-strength","explains","method/sketch-to-cut"),
  ("method/key-cut","explains","method/sketch-to-cut"),("method/reference-sheet","explains","method/sheet-prompt"),("analogy/pizza","explains","method/conti-book"),("method/three-lines","usedIn","application/template"),("concept/shot-size","usedIn","application/practice")]
 REFS = [
- dict(id="user_refs_2026", title="참고 이미지 5장 — 그림 콘티 템플릿(흑백·인쇄용 8컷), 원근과 인물 크기 도해, 어린이·성인 얼굴 비교, 손에 든 물건과 자세의 중심축 도해, 캐릭터 일관성 기준 시트 예시", author="사용자 제공 자료", year=2026, note="콘티 양식(목적·흐름·감정 세 줄), 눈높이 선과 소실점, 성인 얼굴 신호, 중심축·물건 무게·과장, 일관성 기준 시트의 원리만 참고. 그림·문장·도식·구성은 옮기지 않고 연구실 캐릭터와 실험으로 새로 구성"),
  dict(id="katz_1991_shot", title="Film Directing Shot by Shot: Visualizing from Concept to Screen", author="Steven D. Katz", year=1991, note="Michael Wiese Productions — 콘티(스토리보드)로 장면과 카메라를 설계하는 방법"),
  dict(id="bordwell_2019_filmart", title="Film Art: An Introduction (12th ed.)", author="David Bordwell, Kristin Thompson, Jeff Smith", year=2019, note="McGraw-Hill — 샷 크기·앵글, 180도 규칙(가상선), 시선 일치 같은 편집의 연속성"),
  dict(id="thomas_1981_illusion", title="The Illusion of Life: Disney Animation", author="Frank Thomas, Ollie Johnston", year=1981, note="Abbeville Press — 연출(스테이징)·실루엣·과장 같은 애니메이션 원칙"),
@@ -514,7 +513,6 @@ def build_index():
 <p class="hint" style="margin-top:10px">하루·시아·모아는 20대 성인 연구원, 박사는 30대 성인 남성입니다. 콘티의 마네킹 인물도 모두 성인 비율로 그립니다.</p></div></section>
 <section id="source"><div class="wrap"><h2>원리와 출처</h2>
 <p>콘티를 짜는 원리(이야기를 컷으로 나누기, 컷마다 목적·흐름·감정 적기, 샷 크기와 앵글, 가상선과 시선 잇기, 컷 길이)는 영상·애니메이션 연출에서 널리 쓰는 원리이며, Katz(1991), Bordwell·Thompson·Smith(2019)를 참고해 쉽게 풀었습니다. 자세의 중심축·실루엣·과장은 Thomas·Johnston(1981), 눈높이 선과 소실점은 Loomis(1951)를 바탕으로 했습니다.</p>
-<p>사용자가 제공한 참고 이미지 다섯 장(흑백 인쇄용 8컷 그림 콘티 템플릿, 원근과 인물 크기 도해, 어린이·성인 얼굴 비교, 손에 든 물건과 자세의 중심축 도해, 캐릭터 일관성 기준 시트 예시)에서는 원리만 가져왔습니다. 그림·문장·도식·구성은 옮기지 않았고, 연구실 캐릭터와 직접 움직이는 실험으로 새로 구성했습니다. 어린이 얼굴 예시는 '어려 보이는 쏠림'을 막는 데만 썼고, 무기를 든 자세 예시는 상자·문·우산으로 바꿨습니다.</p>
 <p>밑그림 강도와 부분 수정, 캐릭터 일관성은 확산 모델 연구(Meng 외 2022, Rombach 외 2022, Lugmayr 외 2022, Ruiz 외 2023)를 바탕으로 풀었습니다. 1~7부 그림(표지 8장은 픽셀풍, 본문·실패·연습 그림은 애니풍과 연필 콘티)은 Genspark로 만들었습니다(2026-11-26). 요청과 다르게 나온 곳은 그림 설명과 '실제 결과'에 있는 그대로 적었고, 요청과 다른 인물·옷차림이 나온 비교 그림 1장은 싣지 않았습니다. 8부 콘티 북 그림 22장과, 처음에 요청과 다르게 나와 다시 만든 그림 10장도 반영했습니다(2026-11-26). 요청문은 저장소 <code>docs/image_requests*/</code>에 있습니다. 실험 패널과 예시 콘티 그림은 모두 페이지 안에서 직접 계산해 그립니다.</p></div></section>
 """
     s += kg_block("index", [P["file"] for P in PARTS] + ["practice/index.html", "08_conti_book.html", "practice/template.html"])
